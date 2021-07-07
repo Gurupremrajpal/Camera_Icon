@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CameraIcon</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">
+		*, *::before, *::after{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: 'Rancho', cursive;
+		}
+
+		html{
+			font-size: 62.5%;
+		}
+
+		:root{ /*colors are stored in variables so we can directily call the variables*/
+			--camera-body: #d2dae2;
+			--box-shadow: #222a2f;
+			--power-btn: #0be881;
+			--camera-lens: #218c74;
+		}
+
+		.center_div{
+			width: 100vw;
+			height: 100vh;
+			background-color: hsl(206, 21%, 94%);
+			display: grid;
+			place-items: center;
+		}
+
+		.camera_body{
+			width: 20rem;
+			height: 15rem;
+			background-color: var(--camera-body);
+			border-radius: 1rem;
+			box-shadow: 0 1rem 1.2rem -1rem var(--box-shadow);
+			position: relative;
+			display: grid;
+			place-items:  center;
+		}
+
+		.camera_btn{
+			width: 3rem;
+			height: .8rem;
+			background-color: var(--power-btn);
+			position: absolute;
+			top: -.8rem;
+			left: 2rem;
+			border-top-left-radius: .8rem;
+			border-top-right-radius: .8rem;
+		}
+
+		.camera_flash{
+			width: 2rem;
+			height: 2rem;
+			border-radius: 50%;
+			background-color: #fff;
+			position: absolute;
+			right: 2rem;
+			top: 1rem;
+			box-shadow: 0 1rem 1.2rem -1rem var(--box-shadow);
+		}
+
+		.camera_lens{
+			width: 11rem;
+			height: 11rem;
+			border-radius: 50%;
+			background-color: #fff;
+			position: relative;
+			box-shadow: 0 1rem 1.2rem -1rem var(--box-shadow);
+			display: grid;
+			place-items: center;
+
+		}
+
+		.camera_lens::before{
+			content: "";
+			width: 9rem;
+			height: 9rem;
+			border-radius: 50%;
+			background-color: var(--camera-lens);
+			position: absolute;
+			box-shadow: 0 1rem 1.2rem -1rem var(--box-shadow);
+		}
+
+		.camera_lens::after{
+			content: "";
+			border-radius: 50%;
+			position: absolute;
+			border-top: 3rem solid #98FB98;
+			border-right: 3rem solid #90EE90;
+			border-bottom: 3rem solid #2E8B57;
+			border-left: 3rem solid #3CB371;
+			box-shadow: 0 1rem 1.2rem -1rem var(--box-shadow);
+		}
+
+		.Name{
+			color: black;
+			position: absolute;
+			top: 65%;
+			left: 43%;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="center_div"> 
+		<div class="camera_body"> 
+			<div class="camera_btn"></div> 
+			<div class="camera_flash"></div>
+			<div class="camera_lens"></div>
+		</div>
+		<div class="Name">
+			<h1>By:- Guruprem Rajpal</h1>
+		</div>
+	</div>
+</body>
+</html>
